@@ -7,7 +7,8 @@ name = "aura-link"
 version = "1.0.0"
 description = "Aura Link — local execution bridge for the Aura platform"
 readme = "README.md"
-license = { text = "MIT" }
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.11"
 authors = [{ name = "Aura" }]
 keywords = ["aura", "ai", "developer-tools", "cli", "automation"]
@@ -15,12 +16,11 @@ classifiers = [
     "Development Status :: 4 - Beta",
     "Environment :: Console",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Topic :: Software Development :: Tools",
+    "Topic :: Software Development :: Build Tools",
     "Topic :: Utilities",
 ]
 dependencies = [
