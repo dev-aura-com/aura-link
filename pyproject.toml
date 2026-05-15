@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aura-link"
+version = "1.0.0"
+description = "Aura Link — local execution bridge for the Aura platform"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "Aura" }]
+keywords = ["aura", "ai", "developer-tools", "cli", "automation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Tools",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "websockets>=12.0",
+    "watchdog>=4.0",
+    "click>=8.1",
+    "pathspec>=0.12",
+    "httpx>=0.27",
+]
+
+[project.urls]
+Homepage = "https://dev-aura.com"
+API = "https://api.dev-aura.com"
+Repository = "https://github.com/aura-dev/aura-link"
+"Bug Tracker" = "https://github.com/aura-dev/aura-link/issues"
+
+[project.scripts]
+aura-link = "aura_link.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["*.egg-info*"]
