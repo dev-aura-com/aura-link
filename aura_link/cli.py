@@ -147,8 +147,8 @@ def main() -> None:
 # ── login ─────────────────────────────────────────────────────────────────────
 
 @main.command()
-@click.option("--url", envvar="AURA_SERVER", default=None, help="Backend server URL (default:  https://api.dev-aura.com)")
-@click.option("--web", "web_url", default=None, help="Web UI URL (default:  https://dev-aura.com)")
+@click.option("--url", envvar="AURA_SERVER", default=None, help="Backend server URL (default: https://api.dev-aura.com)")
+@click.option("--web", "web_url", default=None, help="Web UI URL (default: https://dev-aura.com)")
 def login(url: str | None, web_url: str | None) -> None:
     """Authenticate via browser — no manual token copying required."""
     server = url or os.environ.get("AURA_SERVER", _DEFAULT_SERVER)

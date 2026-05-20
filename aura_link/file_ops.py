@@ -15,6 +15,20 @@ class FileOps:
         self._filter = SecretFilter(self._root)
 
     def _resolve(self, rel: str) -> Path:
+        # Reject any path the cloud sends that is already absolute. Python's /
+        # operator silently discards self._root when the right-hand side is an
+        # absolute path (Path("/safe/root") / "/etc/passwd" → Path("/etc/passwd")),
+        # so we must catch this before the join, not after.
+        if (
+            rel.startswith("/")
+            or rel.startswith("\\")
+            or rel.startswith("~")
+            or (len(rel) >= 2 and rel[1] == ":" and rel[0].isalpha())  # Windows drive: C:\...
+        ):
+            raise PermissionError(
+                f"SECURITY: absolute path rejected: {rel!r}. "
+                "All agent-issued paths must be relative to the project root."
+            )
         target = (self._root / rel).resolve()
         try:
             target.relative_to(self._root)
