@@ -21,7 +21,7 @@ pip install aura-link
 ### Option 2 — clone and install
 
 ```bash
-git clone https://github.com/aura-dev/aura-link.git
+git clone https://github.com/dev-aura-com/aura-link
 cd aura-link
 pip install -e .
 ```
@@ -58,10 +58,10 @@ aura-link logout                                 # remove saved credentials
 
 ## Environment variables
 
-| Variable | Description | Default |
-|---|---|---|
-| `AURA_SERVER` | Backend API URL | `https://api.dev-aura.com` |
-| `AURA_TOKEN` | JWT access token (alternative to `aura-link login`) | — |
+| Variable      | Description                                         | Default                    |
+| ------------- | --------------------------------------------------- | -------------------------- |
+| `AURA_SERVER` | Backend API URL                                     | `https://api.dev-aura.com` |
+| `AURA_TOKEN`  | JWT access token (alternative to `aura-link login`) | —                          |
 
 ## Security
 
