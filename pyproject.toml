@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "aura-link"
-version = "1.0.0"
+version = "1.0.1"
 description = "Aura Link — local execution bridge for the Aura platform"
 readme = "README.md"
 license = "MIT"
@@ -34,8 +34,8 @@ dependencies = [
 [project.urls]
 Homepage = "https://dev-aura.com"
 API = "https://api.dev-aura.com"
-Repository = "https://github.com/aura-dev/aura-link"
-"Bug Tracker" = "https://github.com/aura-dev/aura-link/issues"
+Repository = "https://github.com/dev-aura-com/aura-link"
+"Bug Tracker" = "https://github.com/dev-aura-com/aura-link/issues"
 
 [project.scripts]
 aura-link = "aura_link.cli:main"
